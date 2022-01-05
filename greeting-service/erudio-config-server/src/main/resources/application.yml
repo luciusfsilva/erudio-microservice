@@ -1,0 +1,20 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: erudio-config-server
+  #profiles:
+  #  active:
+  #  - native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/luciusfsilva/erudio-config-server
+          #Se for um repositorio privado deve-se colocar as credencias do git
+          #username: username
+          #password: password
+          #Nome da branch e repositorio
+          default-label: main
+          search-paths:
+          - 'greeting-service*'

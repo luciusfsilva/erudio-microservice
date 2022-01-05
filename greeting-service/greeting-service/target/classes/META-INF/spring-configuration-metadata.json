@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "greeting-service",
+      "type": "br.com.erudio.greetingservice.configuration.GreetingConfiguration",
+      "sourceType": "br.com.erudio.greetingservice.configuration.GreetingConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "name": "greeting-service.default-value",
+      "type": "java.lang.String",
+      "sourceType": "br.com.erudio.greetingservice.configuration.GreetingConfiguration"
+    },
+    {
+      "name": "greeting-service.greeting",
+      "type": "java.lang.String",
+      "sourceType": "br.com.erudio.greetingservice.configuration.GreetingConfiguration"
+    }
+  ],
+  "hints": []
+}

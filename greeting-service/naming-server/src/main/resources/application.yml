@@ -1,0 +1,10 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: naming-server
+#ele não procure se auto registrar, isso é feito local, mas em produção a gente tira essa propriedade
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
