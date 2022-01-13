@@ -26,8 +26,26 @@ jobs:
         with:
          java-version: '17'
          distribution: 'adopt'
+         
       - name: Build Eureka Naming Server Container Image
         working-directory: ./greeting-service/naming-server
         run: mvn spring-boot:build-image -DskipTest
+        
+      - name: Build API Gateway Container Image
+        working-directory: ./greeting-service/api-gateway
+        run: mvn spring-boot:build-image -DskipTest
+        
+      - name: Build Cambio Microservice Jar
+        working-directory: ./greeting-service/cambio-service
+        run: mvn clean package -DskipTest
+        
+      - name: Build Book Microservice Jar
+        working-directory: ./greeting-service/book-service
+        run: mvn clean package -DskipTest
+        
+      - name: Docker Compose Build
+        working-directory: ./greeting-service
+        run: docker-compose build
+    
     
           
