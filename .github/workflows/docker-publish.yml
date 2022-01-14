@@ -24,8 +24,8 @@ jobs:
       - name: Setup Java JDK
         uses: actions/setup-java@v2.5.0
         with:
-         java-version: '17'
-         distribution: 'microsoft'
+         java-version: '16'
+         distribution: 'adopt'
          
       - name: Build Eureka Naming Server Container Image
         working-directory: ./greeting-service/naming-server
